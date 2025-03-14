@@ -9,7 +9,7 @@ const decrease=()=> count.value--
 <template>
   <div>
     <h1>Counter App</h1>
-    <p>{{ count }}</p>
+    <p :class="{'negative':count<0}">{{ count }}</p>
     <button type="submit" @click="decrease">Decrease</button>
     <button type="submit" @click="increase">increase</button>
   </div>
@@ -52,6 +52,8 @@ button{
   font-size:1.5rem;
   width: 100%;
 }
-
+.negative{
+  color: red;
+}
 </style>
 
